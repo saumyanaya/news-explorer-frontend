@@ -1,0 +1,30 @@
+.about {
+  display: flex;
+  background-color: #fff;
+  padding: 80px 104px;
+  max-width: calc(100% - 2 * 104px);
+}
+
+.about__img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.about__img-container {
+  max-width: 464px;
+  display: flex;
+}
+
+.about__text-container {
+  margin-left: 56px;
+}
+
+.about__title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  color: #1a1b22;
+}

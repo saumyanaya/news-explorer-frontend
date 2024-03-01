@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0px 104px;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header_theme_light {
+  background: #fff;
+  color: #1a1b22;
+  border-bottom: 1px solid #b6bcbf;
+}
+
+.header__overlay {
+  background-color: #1a1b22;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  flex: initial;
+}
+
+.header__wrapper_light {
+  background: #fff;
+}
+
+.header__logo {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  align-self: center;
+}
+
+.header__button {
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  background-color: transparent;
+  border-style: none;
+  display: none;
+  cursor: pointer;
+}
+
+.header__button-dark_type_closed {
+  background-image: url("../../images/menu-dark.svg");
+}
+
+.header__button-dark_type_expanded {
+  background-image: url("../../images/close-btn-dark.svg");
+}
+
+.header__button_type_closed {
+  background-image: url("../../images/menu.svg");
+}
+
+.header__button_type_expanded {
+  background-image: url("../../images/close-btn.svg");
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .header {
+    padding: 0;
+    flex-direction: column;
+    border-bottom: none;
+  }
+
+  .header_active {
+    background-color: #1a1b22;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .header_active-light {
+    background-color: #fff;
+  }
+
+  .header__wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px 40px;
+    max-width: calc(100% - 2 * 40px);
+  }
+
+  .header__wrapper_light {
+    border-bottom: 1px solid #b6bcbf;
+  }
+
+  .header__button {
+    padding: 0;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__wrapper {
+    padding: 16px;
+    max-width: calc(100% - 2 * 16px);
+  }
+
+  .header__logo {
+    font-size: 16px;
+  }
+}

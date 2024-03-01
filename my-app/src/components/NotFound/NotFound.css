@@ -1,0 +1,24 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.notFound__icon {
+  width: 74px;
+  height: 74px;
+}
+
+.notFound__title {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  color: #1a1b22;
+}
+
+.notFound__text {
+  color: #b6bcbf;
+  max-width: 288px;
+  text-align: center;
+}
