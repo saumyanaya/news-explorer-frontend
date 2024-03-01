@@ -8,7 +8,6 @@ import InfoToolTip from "../InfoToolTip/InfoToolTip";
 import SignInPopup from "../SignInPopup/SignInPopup";
 import SignUpPopup from "../SignUpPopup/SignUpPopup";
 import newsApi from "../../utils/NewsApi";
-// import mainApi from "../../utils/MainApi";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { errorMessages } from "../../utils/errorMessages";
@@ -37,86 +36,12 @@ const App = () => {
   const [serverMessage, setServerMessage] = useState("");
   const [isDisabledInput, setIsDisabledInput] = useState(false);
 
-  // function handleArticleBookmark(article) {
-  //   const bookmarkedArticle = savedNews.find((i) => i.title === article.title);
-  //   if (bookmarkedArticle !== undefined) {
-  //     mainApi
-  //       .removeBookmark(bookmarkedArticle._id)
-  //       .then(() => {
-  //         article.isBookmarked = false;
-  //         setArticles(articles);
-  //         localStorage.setItem("storedArticles", JSON.stringify(articles));
-  //         const newSavedNews = savedNews.filter(
-  //           (a) => a._id !== bookmarkedArticle._id
-  //         );
-  //         setSavedNews(newSavedNews);
-  //       })
-  //       .catch((err) => {
-  //         setErrorMessage(err);
-  //         setIsNothingFound(true);
-  //       });
-  //   } else {
-  //     mainApi
-  //       .addBookmark(article)
-  //       .then((res) => {
-  //         article.isBookmarked = true;
-  //         res.isBookmarked = true;
-  //         setArticles(articles);
-  //         localStorage.setItem("storedArticles", JSON.stringify(articles));
-  //         setSavedNews([res, ...savedNews]);
-  //       })
-  //       .catch((err) => {
-  //         setErrorMessage(err);
-  //         setIsNothingFound(true);
-  //       });
-  //   }
-  // }
-
-  // function handleDeleteClick(article) {
-  //   mainApi
-  //     .removeBookmark(article._id)
-  //     .then((res) => {
-  //       const newSavedNews = savedNews.filter((a) => a._id !== article._id);
-  //       setSavedNews(newSavedNews);
-  //     })
-  //     .catch((err) => {
-  //       setErrorMessage(err);
-  //       setIsNothingFound(true);
-  //     });
-  // }
-
-  function handleRegister(credentials) {
-    //   setIsDisabledInput(true);
-    //   mainApi
-    //     .register(credentials)
-    //     .then(() => {
-    //       closeAllPopups();
-    //       handleSignUpSuccess();
-    //       setIsDisabledInput(false);
-    //     })
-    //     .catch((err) => {
-    //       setServerMessage(err);
-    //       setIsDisabledInput(false);
-    //     });
+  function handleRegister() {
+    setIsDisabledInput(true);
   }
 
-  function handleLogin(credentials) {
+  function handleLogin() {
     setIsDisabledInput(true);
-    //   mainApi
-    //     .authorize(credentials)
-    //     .then((data) => {
-    //       localStorage.setItem("jwt", data.token);
-    //       mainApi.setToken(data.token);
-    //     })
-    // .then(() => {
-    //   setIsLoggedIn(true);
-    //   setIsDisabledInput(false);
-    //   closeAllPopups();
-    // })
-    // .catch((err) => {
-    //   setServerMessage(err);
-    //   setIsDisabledInput(false);
-    // });
   }
 
   function handleLogOut() {
@@ -189,10 +114,6 @@ const App = () => {
     }
   }
 
-  // function handleSignUpSuccess() {
-  //   setIsInfoToolTipPopupOpen(true);
-  // }
-
   function handleSignUpClick() {
     setIsSignInPopupOpen(false);
     setIsSignUpPopupOpen(true);
@@ -233,32 +154,6 @@ const App = () => {
     };
   }, [handleEscKey]);
 
-  // useEffect(() => {
-  //   const jwt = localStorage.getItem("jwt");
-  //   if (jwt) {
-  //     mainApi.setToken(jwt);
-  //     setIsLoggedIn(true);
-  //     mainApi
-  //       .getAppInfo()
-  //       .then(([articles, user]) => {
-  //         setIsSendingRequest(false);
-  //         setIsLoggedIn(true);
-  //         const ownersData = articles.filter((i) => i.owner === user._id);
-  //         setSavedNews(ownersData);
-  //         setCurrentUser(user);
-  //       })
-  //       .catch((err) => {
-  //         setIsNothingFound(true);
-  //         setErrorMessage(err);
-  //       });
-  //   }
-  //   setIsSendingRequest(false);
-  // }, [isLoggedIn]);
-
-  // if (isSendingRequest) {
-  //   return null;
-  // }
-
   return (
     <>
       <CurrentUserContext.Provider value={currentUser}>
@@ -272,13 +167,11 @@ const App = () => {
             isLoggedIn={isLoggedIn}
             onLogOut={handleLogOut}
             savedNews={savedNews}
-            // onDelete={handleDeleteClick}
             isNothingFound={isNothingFound}
             errorMessage={errorMessage}
           />
           <Route path="/">
             <Main
-              // onBookmarkClick={handleArticleBookmark}
               errorMessage={errorMessage}
               isShowMoreVisible={isShowMoreVisible}
               onShowMore={handleShowMore}
