@@ -30,9 +30,8 @@ const App = () => {
   const [isShowMoreVisible, setIsShowMoreVisible] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
-  const [currentUser, setCurrentUser] = useState({});
-  const [savedNews, setSavedNews] = useState([]);
-  // const [isSendingRequest, setIsSendingRequest] = useState(true);
+  const [currentUser] = useState({});
+  const [savedNews] = useState([]);
   const [serverMessage, setServerMessage] = useState("");
   const [isDisabledInput, setIsDisabledInput] = useState(false);
 
@@ -134,18 +133,6 @@ const App = () => {
     },
     [closeAllPopups]
   );
-
-  useEffect(() => {
-    const jwt = localStorage.getItem("jwt");
-    if (jwt) {
-      const storedArticles = JSON.parse(localStorage.getItem("storedArticles"));
-      if (storedArticles) {
-        setArticles(storedArticles);
-        setArticlesToShow(storedArticles.slice(0, limit));
-        setIsSearching(true);
-      }
-    }
-  }, [limit]);
 
   useEffect(() => {
     document.addEventListener("keydown", handleEscKey);
