@@ -25,18 +25,20 @@
 }
 
 .newsCardList__btn {
-  background: #fff;
-  opacity: 1;
-  border-radius: 80px;
-  color: #1a1b22;
+  line-height: 24px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px 0;
   width: 288px;
-  height: 64px;
   border: none;
-  cursor: pointer;
+  border-radius: 80px;
+  margin: 64px auto 0;
+  background-color: #fff;
 }
-
 .newsCardList__btn:hover {
-  opacity: 0.9;
+  background-color: #e8e8e8;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {

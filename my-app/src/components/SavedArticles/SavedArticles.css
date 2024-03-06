@@ -10,8 +10,9 @@
 .savedArticles__title {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 1.3;
-  color: rgba(26, 27, 34, 0.5);
+  line-height: 24px;
+  font-weight: 500px;
+  background: #b6bcbf;
 }
 
 .savedArticles__text {
