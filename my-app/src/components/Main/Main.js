@@ -34,7 +34,6 @@ function Main({
           />
           <SearchForm onSearch={onSearch} isLoading={isLoading} />
         </div>
-        <About />
       </section>
       {isNothingFound && <NotFound>{errorMessage}</NotFound>}
       {isLoading && <Preloader />}
@@ -47,6 +46,7 @@ function Main({
           onBookmarkClick={onBookmarkClick}
         />
       )}
+      <About />
     </>
   );
 }
