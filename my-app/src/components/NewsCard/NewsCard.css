@@ -16,7 +16,7 @@
   border-top-right-radius: inherit;
   display: flex;
   width: 100%;
-  height: auto;
+  height: 272px;
 }
 
 .card__tooltip-text {
