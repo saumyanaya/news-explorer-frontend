@@ -4,9 +4,9 @@ import Popup from "../Popup/Popup";
 
 function InfoToolTip(props) {
   return (
-    <div className="infoToolTip">
+    <div className="info-tooltip">
       <Popup isOpen={props.isOpen} onClose={props.onClose}>
-        <p className="infoToolTip__text">
+        <p className="info-tooltip__text">
           Registration successfully completed!
         </p>
         <button

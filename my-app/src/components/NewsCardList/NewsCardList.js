@@ -7,9 +7,9 @@ function NewsCardsList(props) {
   }
 
   return (
-    <section className="newsCardList">
-      <h3 className="newsCardList__title">Search results</h3>
-      <ul className="newsCardList__gallery">
+    <section className="news-cardlist">
+      <h3 className="news-cardlist__title">Search results</h3>
+      <ul className="news-cardlist__gallery">
         {props.articles.map((article, id) => (
           <NewsCard article={article} key={id}>
             <div className="card__buttons-wrapper card__buttons-wrapper_placement_right">
@@ -43,7 +43,7 @@ function NewsCardsList(props) {
       </ul>
       {props.isShowMoreVisible && (
         <button
-          className="newsCardList__btn"
+          className="news-cardlist__btn"
           type="button"
           onClick={props.onShowMore}
         >

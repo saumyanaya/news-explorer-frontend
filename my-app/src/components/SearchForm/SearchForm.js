@@ -13,15 +13,15 @@ function SearchForm(props) {
     props.onSearch(values.keyword);
   }
   return (
-    <form className="searchForm" onSubmit={handleSubmit}>
-      <h1 className="searchForm__title">What's going on in the world?</h1>
-      <p className="searchForm__subtitle">
+    <form className="searchform" onSubmit={handleSubmit}>
+      <h1 className="searchform__title">What's going on in the world?</h1>
+      <p className="searchform__subtitle">
         Find the latest news on any topic and save them in your personal
         account.
       </p>
-      <div className="searchForm__input-wrapper">
+      <div className="searchform__input-wrapper">
         <input
-          className="searchForm__input"
+          className="searchform__input"
           placeholder="Enter topic"
           onChange={handleChange}
           onInvalid={handleInvalid}
@@ -32,12 +32,12 @@ function SearchForm(props) {
         />
         <button
           type="submit"
-          className="searchForm__button button button_type_primary"
+          className="searchform__button button button_type_primary"
         >
           Search
         </button>
       </div>
-      <span className="searchForm__input-error">{errors.keyword}</span>
+      <span className="searchform__input-error">{errors.keyword}</span>
     </form>
   );
 }

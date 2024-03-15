@@ -1,4 +1,4 @@
-.savedNews {
+.savednews {
   display: grid;
   grid-template-columns: repeat(3, minmax(224px, 1fr));
   grid-auto-columns: min-content;
@@ -10,20 +10,20 @@
 }
 
 @media screen and (max-width: 900px) {
-  .savedNews {
+  .savednews {
     grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
   }
 }
 
 @media screen and (max-width: 768px) {
-  .savedNews {
+  .savednews {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .savedNews {
+  .savednews {
     padding: 24px 16px;
     grid-gap: 8px 0;
   }

@@ -11,7 +11,7 @@ function SavedNews({ savedNews, onDelete }) {
     onDelete(article);
   }
   return (
-    <ul className="savedNews">
+    <ul className="savednews">
       {savedNews.map((article, id) => (
         <NewsCard article={article} key={id}>
           <div className="card__buttons-wrapper card__buttons-wrapper_placement_spaceout">

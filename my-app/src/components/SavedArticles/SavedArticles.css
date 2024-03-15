@@ -1,13 +1,13 @@
-.savedArticles {
+.savedarticles {
   padding: 40px 104px;
-  background: #b6bcbf;
+  background: #fff;
   color: #1a1b22;
   font-size: 18px;
   line-height: 1.3;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.savedArticles__title {
+.savedarticles__title {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -15,35 +15,35 @@
   background: #b6bcbf;
 }
 
-.savedArticles__text {
+.savedarticles__text {
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 40px;
 }
 
-.savedArticles__accent {
+.savedarticles__accent {
   font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
-  .savedArticles {
+  .savedarticles {
     padding: 40px;
   }
 
-  .savedArticles__title {
+  .savedarticles__title {
     font-size: 14px;
   }
 
-  .savedArticles__text {
+  .savedarticles__text {
     font-size: 30px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .savedArticles {
+  .savedarticles {
     padding: 32px 16px;
   }
 
-  .savedArticles__title {
+  .savedarticles__title {
     font-size: 12px;
   }
 }

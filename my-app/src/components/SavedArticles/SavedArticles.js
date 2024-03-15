@@ -44,14 +44,14 @@ function SavedArticles({ savedNews }) {
   );
 
   return (
-    <section className="savedArticles">
-      <h1 className="savedArticles__title">Saved Articles</h1>
-      <p className="savedArticles__text">
+    <section className="savedarticles">
+      <h1 className="savedarticles__title">Saved Articles</h1>
+      <p className="savedarticles__text">
         {currentUser.name}, you have {savedNews.length} saved articles
       </p>
       <p>
         By keywords:{" "}
-        <span className="savedArticles__accent">{concatinatedKeywords}.</span>
+        <span className="savedarticles__accent">{concatinatedKeywords}.</span>
       </p>
     </section>
   );
