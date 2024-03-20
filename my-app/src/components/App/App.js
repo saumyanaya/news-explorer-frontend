@@ -6,12 +6,15 @@ import SavedNewsPage from "../SavedNewsPage/SavedNewsPage";
 import Footer from "../Footer/Footer";
 import InfoToolTip from "../InfoToolTip/InfoToolTip";
 import SignInPopup from "../SignInPopup/SignInPopup";
+import Api from "../../utils/Api";
 import SignUpPopup from "../SignUpPopup/SignUpPopup";
 import newsApi from "../../utils/NewsApi";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { errorMessages } from "../../utils/errorMessages";
 import { MAXITEMS } from "../../utils/constants";
+
+// states defined
 
 const App = () => {
   const limit = MAXITEMS;
@@ -30,17 +33,51 @@ const App = () => {
   const [isShowMoreVisible, setIsShowMoreVisible] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
-  const [currentUser] = useState({});
-  const [savedNews] = useState([]);
+  const [currentUser, setCurrentUser] = useState({});
+  const [savedNews, setSavedNews] = useState([]);
   const [serverMessage, setServerMessage] = useState("");
   const [isDisabledInput, setIsDisabledInput] = useState(false);
+
+  // function handle
 
   function handleRegister() {
     setIsDisabledInput(true);
   }
+  function handleArticleBookmark(article) {
+    article.isBookmarked = true;
+  }
+  // function handleArticleBookmark(article, token) {
+  //   Api.addBookmark(article, token)
+  //     .then((res) => {
+  //       article.isBookmarked = true;
+  //       res.isBookmarked = true;
+  //       setArticles(articles);
+  //       localStorage.setItem("storedArticles", JSON.stringify(articles));
+  //       setSavedNews([res, ...savedNews]);
+  //     })
+  //     .catch((err) => {
+  //       setErrorMessage(err);
+  //       setIsNothingFound(true);
+  //     });
+  // }
+
+  function handleDeleteClick(article) {
+    Api.removeBookmark(article._id)
+      .then((res) => {
+        const newSavedNews = savedNews.filter((a) => a._id !== article._id);
+        setSavedNews(newSavedNews);
+      })
+      .catch((err) => {
+        setErrorMessage(err);
+        setIsNothingFound(true);
+      });
+  }
 
   function handleLogin() {
+    setCurrentUser("Saumya");
     setIsDisabledInput(true);
+    setIsLoggedIn(true);
+    closeAllPopups();
   }
 
   function handleLogOut() {
@@ -134,12 +171,28 @@ const App = () => {
     [closeAllPopups]
   );
 
+  // useeffect
+
   useEffect(() => {
     document.addEventListener("keydown", handleEscKey);
     return () => {
       document.removeEventListener("keydown", handleEscKey);
     };
   }, [handleEscKey]);
+
+  useEffect(() => {
+    const jwt = localStorage.getItem("jwt");
+    if (jwt) {
+      const storedArticles = JSON.parse(localStorage.getItem("storedArticles"));
+      if (storedArticles) {
+        setArticles(storedArticles);
+        setArticlesToShow(storedArticles.slice(0, limit));
+        setIsSearching(true);
+      }
+    }
+  }, [limit]);
+
+  // jsx
 
   return (
     <>
@@ -160,6 +213,7 @@ const App = () => {
           <Route path="/">
             <Main
               errorMessage={errorMessage}
+              onBookmarkClick={handleArticleBookmark}
               isShowMoreVisible={isShowMoreVisible}
               onShowMore={handleShowMore}
               isNothingFound={isNothingFound}
@@ -167,6 +221,7 @@ const App = () => {
               onSignIn={handleSignInClick}
               menuButtonVisible={isMenuButtonVisible}
               isLoggedIn={isLoggedIn}
+              onDelete={handleDeleteClick}
               articles={articlesToShow}
               isSearching={isSearching}
               isLoading={isLoading}

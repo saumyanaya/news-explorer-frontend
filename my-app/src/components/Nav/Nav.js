@@ -6,6 +6,7 @@ import { CurrentUserContext } from "../../context/CurrentUserContext";
 
 function Nav({ isOpen, isLoggedIn, onLogOut, onSignIn }) {
   const currentUser = React.useContext(CurrentUserContext);
+
   return (
     <nav className={`nav ${isOpen ? "nav_active" : ""}`}>
       <NavLink className="nav__link nav__link_active-light" to="/">
@@ -28,7 +29,7 @@ function Nav({ isOpen, isLoggedIn, onLogOut, onSignIn }) {
           className="nav__button nav__button_theme_light"
           onClick={onLogOut}
         >
-          {currentUser.name}
+          {currentUser}
           <img className="nav__icon" src={logout} alt="icon" />
         </button>
       )}

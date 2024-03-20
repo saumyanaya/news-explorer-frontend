@@ -31,8 +31,8 @@ function SavedArticles({ savedNews }) {
   const currentUser = React.useContext(CurrentUserContext);
   const keywords = savedNews
     .map((item) => item.keyword)
-    .reduce((a, e) => {
-      a.push(e.charAt(0).toUpperCase() + e.substr(1));
+    .reduce((a) => {
+      // a.push(charAt(0).toUpperCase() + substr(1));
       return a;
     }, []);
 
@@ -47,11 +47,11 @@ function SavedArticles({ savedNews }) {
     <section className="savedarticles">
       <h1 className="savedarticles__title">Saved Articles</h1>
       <p className="savedarticles__text">
-        {currentUser.name}, you have {savedNews.length} saved articles
+        {currentUser}, you have {savedNews.length} saved articles
       </p>
       <p>
-        By keywords:{" "}
-        <span className="savedarticles__accent">{concatinatedKeywords}.</span>
+        By keywords:<b> Nature, Yellowstone, and 2 other</b>
+        <span className="savedarticles__accent">{concatinatedKeywords}</span>
       </p>
     </section>
   );

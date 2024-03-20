@@ -138,20 +138,60 @@
 }
 
 @media screen and (max-width: 768px) {
+  .card {
+    width: 224px;
+    height: 420px;
+  }
+
+  .card__img {
+    width: 224px;
+    height: 150px;
+  }
+
+  .card__date {
+    width: 144px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 8px;
+  }
+
+  .card__title {
+    width: 192px;
+    height: 72px;
+    font-family: Roboto Slab;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .card__description {
+    width: 192px;
+    height: 88px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 14px;
+  }
+
+  .card__source {
+    width: 192px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    padding-bottom: 16px;
+  }
   .card__description-wrapper {
     width: calc(100% - 2 * 16px);
     margin: 0 auto;
     padding-bottom: 16px;
-  }
-
-  .card__buttons-wrapper {
-    width: calc(100% - 8px * 2);
-    top: 8px;
-    padding: 0 8px;
-  }
-
-  .card__title {
-    font-size: 22px;
   }
 }
 

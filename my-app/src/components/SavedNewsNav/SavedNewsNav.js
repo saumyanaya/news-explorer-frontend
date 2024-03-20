@@ -15,7 +15,7 @@ function SavedNewsNav({ isOpen, onLogOut }) {
         Saved Articles
       </NavLink>
       <button className="nav__button" onClick={onLogOut}>
-        {currentUser.name}
+        {currentUser}
         <img className="nav__icon" src={logout} alt="icon" />
       </button>
     </nav>

@@ -2,7 +2,7 @@ import "./NewsCardList.css";
 import NewsCard from "../NewsCard/NewsCard";
 
 function NewsCardsList(props) {
-  function handleClick(article) {
+  function handleDeleteClick(article) {
     props.onBookmarkClick(article);
   }
 
@@ -17,7 +17,7 @@ function NewsCardsList(props) {
                 type="button"
                 className="card__button"
                 disabled={!props.isLoggedIn}
-                onClick={() => handleClick(article)}
+                onClick={() => handleDeleteClick(article)}
               >
                 <svg
                   className={

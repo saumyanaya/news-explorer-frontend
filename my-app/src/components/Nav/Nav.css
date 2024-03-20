@@ -67,17 +67,43 @@
   }
 
   .nav__link {
+    width: 160px;
+    height: 24px;
+    font-family: Roboto;
     font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
   }
-
-  .nav__button {
+  .nav__link_active-light {
+    width: 68px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 20px;
+    margin-top: 27px;
+  }
+  .nav__icon {
     height: 40px;
     font-size: 16px;
     padding: 10px;
   }
 
   .nav__button_type_sign-in {
-    width: 152px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .nav__button_theme_light {
+    width: 100px;
+    height: 40px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
   }
 }
 

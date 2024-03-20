@@ -44,7 +44,28 @@
 
 @media screen and (max-width: 848px) {
   .footer {
-    max-width: calc(100% - 2 * 40px);
+    max-width: 768px;
+    height: 64px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 24px;
+  }
+  .footer__copywrite {
+    width: 300px;
+    height: 22px;
+  }
+  .footer__link {
+    width: 49px;
+    height: 24px;
+  }
+  .footer__link_type_nav {
+    width: 82px;
+    height: 24px;
+  }
+  .footer__group-right {
+    width: 24px;
+    height: 24px;
+    padding-right: 40px;
   }
 }
 

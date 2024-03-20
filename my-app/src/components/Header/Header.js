@@ -10,7 +10,7 @@ function Header({ onSignIn, menuButtonVisible, isLoggedIn, onLogOut }) {
   }
 
   const handleSignIn = useCallback(() => {
-    setExpanded(false);
+    setExpanded(true);
     onSignIn();
   }, [onSignIn]);
 

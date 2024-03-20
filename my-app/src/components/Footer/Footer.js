@@ -19,7 +19,7 @@ function Footer() {
             className="footer__link footer__link_type_nav"
             href="https://practicum.yandex.com/"
           >
-            Practicum by Yandex
+            Practicum
           </a>
         </div>
         <div className="footer__group-right">
