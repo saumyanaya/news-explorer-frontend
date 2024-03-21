@@ -2,9 +2,9 @@ import React from "react";
 import "./SavedNews.css";
 import NewsCard from "../NewsCard/NewsCard";
 
-// function capitalizeFirstLetter(s) {
-//   return s.charAt(0).toUpperCase() + s.substr(1);
-// }
+function capitalizeFirstLetter(s) {
+  return s.charAt(0).toUpperCase() + s.substr(1);
+}
 
 function SavedNews({ savedNews, onDelete }) {
   function handleDeleteClick(article) {
@@ -16,7 +16,7 @@ function SavedNews({ savedNews, onDelete }) {
         <NewsCard article={article} key={id}>
           <div className="card__buttons-wrapper card__buttons-wrapper_placement_spaceout">
             <p className="card__keyword">
-              {/* {capitalizeFirstLetter(article.keyword)} */}
+              {capitalizeFirstLetter(article.keyword)}
             </p>
 
             <button

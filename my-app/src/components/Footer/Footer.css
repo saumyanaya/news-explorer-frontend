@@ -69,14 +69,17 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 428px) {
   .footer {
     flex-direction: column-reverse;
     max-width: calc(100% - 2 * 16px);
   }
 
   .footer__copywrite {
-    padding-top: 38px;
+    max-width: 288px;
+    height: 22px;
+    font-size: 15px;
+    padding-right: 16px;
   }
 
   .footer__group-left {

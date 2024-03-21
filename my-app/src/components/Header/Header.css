@@ -111,10 +111,11 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 428px) {
   .header__wrapper {
     padding: 16px;
     max-width: calc(100% - 2 * 16px);
+    overflow: hidden;
   }
 
   .header__logo {
