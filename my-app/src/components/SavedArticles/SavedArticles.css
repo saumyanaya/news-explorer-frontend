@@ -12,7 +12,8 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 500px;
-  background: #fff;
+  color: rgb(161, 160, 160);
+  background-color: #fff;
 }
 
 .savedarticles__text {

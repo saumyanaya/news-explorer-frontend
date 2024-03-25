@@ -6,7 +6,8 @@ import SavedNewsPage from "../SavedNewsPage/SavedNewsPage";
 import Footer from "../Footer/Footer";
 import InfoToolTip from "../InfoToolTip/InfoToolTip";
 import SignInPopup from "../SignInPopup/SignInPopup";
-import Api from "../../utils/Api";
+import { fetchCards } from "../../utils/Api";
+
 import SignUpPopup from "../SignUpPopup/SignUpPopup";
 import newsApi from "../../utils/NewsApi";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
@@ -37,6 +38,7 @@ const App = () => {
   const [savedNews, setSavedNews] = useState([]);
   const [serverMessage, setServerMessage] = useState("");
   const [isDisabledInput, setIsDisabledInput] = useState(false);
+  const [onDelete] = useState(false);
 
   // function handle
 
@@ -46,31 +48,18 @@ const App = () => {
   function handleArticleBookmark(article) {
     article.isBookmarked = true;
   }
-  // function handleArticleBookmark(article, token) {
-  //   Api.addBookmark(article, token)
-  //     .then((res) => {
-  //       article.isBookmarked = true;
-  //       res.isBookmarked = true;
-  //       setArticles(articles);
-  //       localStorage.setItem("storedArticles", JSON.stringify(articles));
-  //       setSavedNews([res, ...savedNews]);
-  //     })
-  //     .catch((err) => {
-  //       setErrorMessage(err);
-  //       setIsNothingFound(true);
-  //     });
-  // }
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  function handleDeleteClick(article) {
-    Api.removeBookmark(article._id)
-      .then((res) => {
-        const newSavedNews = savedNews.filter((a) => a._id !== article._id);
-        setSavedNews(newSavedNews);
-      })
-      .catch((err) => {
-        setErrorMessage(err);
-        setIsNothingFound(true);
-      });
+  const fetchData = () => {
+    fetchCards().then((data) => {
+      setSavedNews(data);
+    });
+  };
+
+  function handleDeleteClick() {
+    onDelete(false);
   }
 
   function handleLogin() {

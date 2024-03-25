@@ -32,7 +32,6 @@ function SavedArticles({ savedNews }) {
   const keywords = savedNews
     .map((item) => item.keyword)
     .reduce((a) => {
-      // a.push(charAt(0).toUpperCase() + substr(1));
       return a;
     }, []);
 
