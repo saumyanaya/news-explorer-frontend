@@ -63,9 +63,9 @@ const App = () => {
   }
 
   function handleLogin() {
-    setCurrentUser("Saumya");
     setIsDisabledInput(true);
     setIsLoggedIn(true);
+    setCurrentUser("Saumya");
     closeAllPopups();
   }
 

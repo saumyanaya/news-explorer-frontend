@@ -170,8 +170,7 @@
   }
 
   .nav__button_type_sign-in {
-    width: 288px;
-    max-width: 100%;
+    width: calc(100% - 2 * 40px);
   }
   .nav__button_type_sign-out {
     margin-left: 0;

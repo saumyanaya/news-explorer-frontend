@@ -13,7 +13,11 @@ function Nav({ isOpen, isLoggedIn, onLogOut, onSignIn }) {
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className="nav__link" to="/saved-news">
+        <NavLink
+          className="nav__link"
+          to="/saved-news"
+          style={{ color: "rgba(182, 188, 191, 1)" }}
+        >
           Saved Articles
         </NavLink>
       )}
