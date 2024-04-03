@@ -62,6 +62,8 @@
   }
 
   .news-cardlist__btn {
+    padding: 0px;
+    margin: 0px;
     width: 240px;
     height: 56px;
   }

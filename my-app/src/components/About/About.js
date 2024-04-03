@@ -9,7 +9,7 @@ function about() {
         <img alt="About" className="about__img" src={About} />
       </div>
       <div className="about__text-container">
-        <h3 className="about__title">About the Author</h3>
+        <h3 className="about__title">About the author</h3>
         <p className="about__text">
           I'm a software engineer proficient in JavaScript, Node, and React. I
           transitioned from teaching background to web development to help

@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
   padding: 0;
   padding-left: 26px;
@@ -46,6 +46,8 @@
 @media screen and(min-width:429px) and (max-width: 980px) {
   .footer__copywrite {
     margin-left: 40px;
+    width: 300px;
+    height: 22px;
   }
   .footer__link {
     margin-right: 20px;
@@ -53,6 +55,8 @@
   .footer__link_type_nav {
     margin-left: 20px;
     margin-right: 20px;
+    width: 82px;
+    height: 24px;
   }
   .footer__link_type_social {
     margin-right: 40px;
@@ -66,14 +70,18 @@
       "socials"
       "copyright";
     height: 176px;
-    max-width: 579px;
-    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0;
   }
 
   .footer__copywrite {
-    padding-right: 16px;
     width: 288px;
     grid-area: copyright;
+    padding-bottom: 16px;
+    padding-top: 60px;
   }
 
   .footer__group-left {
@@ -82,10 +90,11 @@
   }
 
   .footer__link {
-    margin: 25px 0;
+    margin: 0px;
   }
 
   .footer__link_type_nav {
     padding-left: 0;
+    padding-top: 20px;
   }
 }

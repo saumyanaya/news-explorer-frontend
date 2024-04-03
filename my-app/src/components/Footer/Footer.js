@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="footer">
       <p className="footer__copywrite">
-        &#169; 2020 Supersite, Powered by News API
+        &#169; 2024 Supersite, Powered by News API
       </p>
       <div className="footer__links">
         <div className="footer__group-left">
@@ -19,7 +19,7 @@ function Footer() {
             className="footer__link footer__link_type_nav"
             href="https://practicum.yandex.com/"
           >
-            Practicum
+            Triple Ten
           </a>
         </div>
         <div className="footer__group-right">
