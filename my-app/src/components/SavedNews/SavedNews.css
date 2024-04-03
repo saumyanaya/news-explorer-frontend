@@ -17,15 +17,12 @@
 
 @media screen and (max-width: 768px) {
   .savednews {
-    /* padding: 0px; */
     grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
     padding-left: 40px;
     padding-right: 40px;
     margin: 0px;
     margin-bottom: 10px;
     padding-bottom: 20px;
-    /* width: 768px;
-    height: 912px; */
   }
 }
 
