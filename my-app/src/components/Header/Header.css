@@ -16,6 +16,7 @@
 
 .header__overlay {
   background-color: #221f1a;
+  display: none;
   color: #fff;
   opacity: 0.5;
   position: fixed;

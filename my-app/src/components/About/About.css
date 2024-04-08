@@ -74,24 +74,28 @@
   }
 
   .about__img {
-    max-width: 200px;
-    height: 200px;
-    margin: 40px 0 40px 60px;
+    max-width: 232px;
+    height: 232px;
+    margin: 60px 0 40px 50px;
   }
 
   .about__text-container {
-    margin: 40px 40px 0 32px;
+    margin: 45px 45px 0px 32px;
   }
 
   .about__title {
     font-size: 30px;
-    width: 370px;
+    width: 424px;
+    line-height: 40px;
+    padding: 0px;
     margin: 0 0 16px;
   }
 
   .about__text {
-    width: 370px;
-    font-size: medium;
+    width: 424px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
   }
 }
 
