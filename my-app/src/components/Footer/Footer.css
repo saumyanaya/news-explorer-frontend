@@ -1,17 +1,19 @@
 .footer {
   display: flex;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: 80px;
   align-content: center;
   padding: 0;
   padding-left: 26px;
-  padding-right: 26px;
 }
 
 .footer__copywrite {
   font-size: 16px;
   color: #b6bcbf;
   margin: 0;
+  padding: 0px;
+  padding-left: 80px;
 }
 
 .footer__links {
@@ -22,43 +24,63 @@
 
 .footer__group-left {
   display: flex;
-  margin-right: 20px;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 11px;
 }
 
 .footer__group-right {
   display: flex;
+  padding: 0px;
+  margin: 0px;
 }
 
 .footer__link {
   text-decoration: none;
   color: #1a1b22;
   cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
 }
 
 .footer__link_type_social {
-  padding-left: 20px;
+  padding-right: 100px;
 }
 
 .footer__link_type_nav {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
-@media screen and(min-width:429px) and (max-width: 980px) {
+@media screen and (min-width: 601px) and (max-width: 980px) {
+  .footer {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 30px;
+  }
   .footer__copywrite {
+    padding: 0px;
+    margin: 0px;
     margin-left: 40px;
     width: 300px;
     height: 22px;
   }
   .footer__link {
-    margin-right: 20px;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 28px;
   }
   .footer__link_type_nav {
+    padding: 0px;
+    margin: 0px;
     margin-left: 20px;
     margin-right: 20px;
     width: 82px;
     height: 24px;
   }
   .footer__link_type_social {
+    margin: 0px;
+    padding: 0px;
     margin-right: 40px;
   }
 }
@@ -75,13 +97,16 @@
     justify-content: space-around;
     align-content: center;
     padding: 0;
+    padding-right: 26px;
+    padding-top: 26px;
   }
 
   .footer__copywrite {
     width: 288px;
     grid-area: copyright;
-    padding-bottom: 16px;
-    padding-top: 60px;
+    padding-left: 15px;
+    padding-bottom: 60px;
+    padding-top: 20px;
   }
 
   .footer__group-left {
@@ -91,10 +116,17 @@
 
   .footer__link {
     margin: 0px;
+    padding: 0px;
+    padding-left: 15px;
+    padding-bottom: 10px;
   }
-
+  .footer__link_type_social {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 25px;
+  }
   .footer__link_type_nav {
-    padding-left: 0;
+    padding-bottom: 15px;
     padding-top: 20px;
   }
 }

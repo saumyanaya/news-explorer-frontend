@@ -213,7 +213,7 @@
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
-    height: 440px;
+    height: 420px;
   }
   .card__img {
     width: 100%;
@@ -224,14 +224,14 @@
     font-size: 18px;
     line-height: 24px;
     margin: 0px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .card__title {
     width: 100%;
     height: 48px;
     margin: 0px;
-    margin-bottom: 10px;
+    margin-top: 15px;
     padding: 0px;
     font-family: Roboto Slab;
     font-size: 22px;
@@ -256,8 +256,9 @@
     line-height: 22px;
     letter-spacing: 0px;
     text-align: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    padding: 0px;
   }
   .card__source {
     width: 100%;
@@ -265,7 +266,9 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.4px;
-    padding-bottom: 16px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
   }
   .card__buttons-wrapper {
     width: calc(100% - 8px * 2);
