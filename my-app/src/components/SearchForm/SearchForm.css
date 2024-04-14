@@ -124,6 +124,11 @@
     height: 56px;
     margin: 10px 0 0;
   }
+  .searchform__input-error {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 30px;
+  }
 
   .searchform__title {
     font-size: 36px;

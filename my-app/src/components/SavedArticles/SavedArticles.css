@@ -17,7 +17,6 @@
   margin: 0px;
   color: rgb(161, 160, 160);
   background-color: #fff;
-  width: 712px;
   height: 24px;
 }
 
@@ -32,7 +31,6 @@
 }
 
 .savedarticles__accent {
-  width: 712px;
   height: 24px;
 }
 
@@ -50,18 +48,20 @@
   }
 
   .savedarticles__text {
-    font-size: 25px;
     width: 336px;
     height: 68px;
     padding: 0px;
     margin: 0px;
     font-size: 30px;
+    padding-top: 10px;
   }
   .savedarticles__accent {
     width: 100%;
     height: 48px;
-    padding-top: 20px;
+    margin: 0px;
+    padding: 0px;
     font-size: 18px;
+    padding-top: 20px;
   }
 }
 
@@ -81,11 +81,14 @@
     width: 100%;
     height: 68px;
     font-size: 30px;
+    padding-bottom: 10px;
   }
   .savedarticles__accent {
     width: 100%;
     height: 48px;
-    padding-top: 20px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 45px;
     font-size: 18px;
   }
 }
