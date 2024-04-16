@@ -1,0 +1,94 @@
+.savedarticles {
+  padding: 40px 104px;
+  background: #fff;
+  color: #1a1b22;
+  font-size: 18px;
+  line-height: 1.3;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.savedarticles__title {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400px;
+  padding: 0px;
+  padding-bottom: 20px;
+  margin: 0px;
+  color: rgb(161, 160, 160);
+  background-color: #fff;
+  height: 24px;
+}
+
+.savedarticles__text {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  width: 530px;
+  height: 92px;
+  padding: 0px;
+  padding-bottom: 25px;
+  margin: 0px;
+}
+
+.savedarticles__accent {
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .savedarticles {
+    padding: 23px 40px;
+  }
+
+  .savedarticles__title {
+    font-size: 14px;
+    width: 100%;
+    height: 24px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .savedarticles__text {
+    width: 336px;
+    height: 68px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 30px;
+    padding-top: 10px;
+  }
+  .savedarticles__accent {
+    width: 100%;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .savedarticles {
+    padding: 8px 16px;
+  }
+
+  .savedarticles__title {
+    font-size: 12px;
+    width: 288px;
+    height: 24px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .savedarticles__text {
+    width: 100%;
+    height: 68px;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .savedarticles__accent {
+    width: 100%;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 45px;
+    font-size: 18px;
+  }
+}
